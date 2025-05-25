@@ -1,0 +1,15 @@
+.habit-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 12px;
+  margin-bottom: 8px;
+  background: #f9f9f9;
+  border-radius: 5px;
+  cursor: pointer;
+}
+  
+  .habit-item.done span {
+    text-decoration: line-through;
+    color: gray;
+  }
+  
