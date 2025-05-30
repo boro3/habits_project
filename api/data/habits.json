@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Example Habit",
+    "description": "This is an example habit.",
+    "createdAt": "2025-05-30T07:19:49.866Z",
+    "updatedAt": "2025-05-30T12:07:10.516Z",
+    "streak": 5,
+    "completedDates": [
+      "2025-05-25",
+      "2025-05-26",
+      "2025-05-27",
+      "2025-05-28",
+      "2025-05-29"
+    ],
+    "id": "640375b5-b6fd-42bc-820a-d37c2b38e1b8"
+  },
+  {
+    "name": "Example Habit 2",
+    "description": "This is example habit number 2.",
+    "createdAt": "2025-05-30T11:34:33.547Z",
+    "updatedAt": "2025-05-30T11:57:25.559Z",
+    "streak": 0,
+    "completedDates": [],
+    "id": "c3d391d0-215f-46b5-ab9b-5664797f2869"
+  }
+]

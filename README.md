@@ -31,6 +31,13 @@ npm install
 
 to install the node modules for the React frontend app.
 
+Also there are required few environment variables they are:
+
+PORT
+USE_FILE_STORAGE (if value 'TRUE' it will use the on file storing repository with fs)
+JWT_SECRET for basic login. At this moment only one hardcoded user exist name: testUser and pass '123'
+
+
 ## Running the code
 
 To run the code you'll need to execute the following commands
@@ -49,8 +56,3 @@ npm start
 
 After all the apps are running, the front end should be accessible on `http://localhost:3000/` and on `http://localhost:8000`. The backend is accessible on `http://localhost:8000/api/habits`.
 
-On the initial commit time restricted work was uploaded so not all requirements were implemented.
-
-1. The front end app is realy simple in design.
-2. No TailwindCSS was used.
-3. No FileHabitRepository for keeping data on file was implemented (only In memroy reppsitory was implemented).

@@ -10,6 +10,14 @@
   
   .habit-item.done span {
     text-decoration: line-through;
+    text-decoration-color: rgb(20, 184, 166);
+    text-decoration-thickness: 2px;
     color: gray;
   }
+
+  .habit-item span {
+    display: flex;
+    align-items: center;
+  }
+  
   
