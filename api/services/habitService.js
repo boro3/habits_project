@@ -1,3 +1,5 @@
+const {calculateStreak} = require('../utils/streakCalculator');
+
 class HabitService {
     constructor(habitRepository) {
       this.habitRepository = habitRepository;
@@ -62,7 +64,7 @@ class HabitService {
       if (habit.completedDates.includes(today)) {
         updatedHabit = {
           ...habit,
-          completedDates: [...habit.completedDates.filter(h => h.HabitService === today)],
+          completedDates: [...habit.completedDates.filter(h => h !== today)],
           updatedAt: new Date().toISOString()
         };
       } else {
@@ -71,10 +73,17 @@ class HabitService {
           completedDates: [...habit.completedDates, today],
           updatedAt: new Date().toISOString()
         };
-      }     
+      } 
+
+      // Calculate the current streak
+      let currentStreak  = calculateStreak(updatedHabit.completedDates, updatedHabit.streak);
+      if (currentStreak > updatedHabit.streak) {
+        updatedHabit.streak = currentStreak;
+      }
       
       return this.habitRepository.update(id, updatedHabit);
     }
+
   }
   
-  module.exports = HabitService;
+module.exports = HabitService;

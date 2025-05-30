@@ -1,4 +1,3 @@
-// API error class
 class ApiResponse {
     constructor(res) {
       this.res = res;
@@ -26,6 +25,14 @@ class ApiResponse {
     //No content response (204 No Content)
     noContent() {
       return this.res.status(204).send();
+    }
+
+    error(message, code, status) {
+      return this.res.status(code).json({
+        status,
+        message,
+        code
+      });
     }
   }
   
